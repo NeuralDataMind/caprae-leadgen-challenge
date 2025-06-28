@@ -86,7 +86,7 @@ python main.py
 ## 📄 Deliverables
 
 * `README.md` (you are here)
-* `rationale.pdf` (explains business use-case thinking)
+* `Caprae Rationale.pdf.pdf` (explains business use-case thinking)
 * `main.py` (runs full backend pipeline)
 * `templates/index.html`, `company.html` (frontend)
 * `data/raw_leads.csv` (sample input)
