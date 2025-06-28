@@ -1,0 +1,11 @@
+name,email,company,role,linkedin_url
+Alice Johnson,alice@aiwave.com,AI Wave,CEO,https://linkedin.com/in/alicejohnson
+Ravi Patel,ravi.patel@gmail.com,AI Wave,ML Engineer,https://linkedin.com/in/ravipatel
+Sarah Kim,sarah@growthhub.com,GrowthHub,VP of Marketing,https://linkedin.com/in/sarahkim
+Emily White,emily.white@dataflow.net,DataFlow,Data Analyst,https://linkedin.com/in/emilywhite
+Michael Brown,michael.brown@cloudnet.org,CloudNet,Cloud Architect,https://linkedin.com/in/michaelbrown
+Jessica Green,jessica.green@finserve.co,FinServe,Financial Analyst,https://linkedin.com/in/jessicagreen
+David Lee,david.lee@medlink.com,MedLink,Product Manager,https://linkedin.com/in/davidlee
+Sophia Garcia,sophia.garcia@globalcorp.net,GlobalCorp,HR Manager,https://linkedin.com/in/sophiagarcia
+Daniel Martinez,daniel.martinez@inovatech.ai,InovaTech,AI Researcher,https://linkedin.com/in/danielmartinez
+Ava Thompson,ava.thompson@smartlogix.com,SmartLogix,Lead Engineer,https://linkedin.com/in/avathompson
