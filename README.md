@@ -77,12 +77,6 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### Optional (Run Flask frontend)
-
-```bash
-python app.py
-```
-
 ---
 
 ## 📄 Deliverables
