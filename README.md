@@ -26,7 +26,11 @@ The goal of this project is to simulate how an AI-enhanced lead generation syste
 ```
 caprae-leadgen-challenge/
 ├── data/
-│   └── raw_leads.csv
+│   ├── final.csv
+│   ├── raw_leads.csv
+│   ├── raw_master.csv
+│   ├── verified_leads.csv
+│   └── enriched_leads.csv
 ├── templates/
 │   ├── index.html
 │   └── company.html
