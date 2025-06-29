@@ -97,7 +97,7 @@ python main.py
 
 ## 📖 Author
 
-**Mallikarjun (Sunny)**
+**Mallikarjun Reddy Bardipuram(Sunny)**
 
 ---
 
