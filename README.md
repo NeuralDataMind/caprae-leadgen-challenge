@@ -1,120 +1,197 @@
-# SaaSquatch Lead Intelligence Tool (Caprae AI Challenge)
-
-This project is a streamlined lead scoring and ranking tool inspired by SaaSquatch Leads, built as part of Caprae Capital's AI-Readiness Pre-Screening Challenge.
+Sure! Here's your **entire `README.md`** in one copy-paste block:
 
 ---
 
-## 📌 Objective
+```markdown
+# 🧠 SaaSquatch Lead Intelligence Tool (Caprae AI Challenge)
 
-The goal of this project is to simulate how an AI-enhanced lead generation system can help prioritize valuable business contacts based on role relevance, email validity, and company signals.
-
----
-
-## 💡 Features
-
-* ✅ Company-based lead filtering
-* ✅ Email verification and enrichment pipeline
-* ✅ Role detection based on title and email patterns
-* ✅ Lead scoring using weighted business logic
-* ✅ Rank-ordered CSV output (`final.csv`)
-* ✅ Bootstrap-powered frontend interface
+This project is a **real-time AI-powered lead enrichment and ranking system** built for the **Caprae Capital AI-Readiness Challenge**. It uses the **Hunter.io API** to enrich company names with actual decision-makers and ranks them using a **zero-shot NLP model** based on role importance.
 
 ---
 
-## 📂 Folder Structure
+## 🎯 Objective
+
+To simulate a practical B2B lead generation workflow that:
+- Pulls decision-makers from public data (via Hunter.io),
+- Scores them by role (CEO > Manager),
+- Outputs a ranked CSV file,
+- And displays it in a lightweight Flask web app.
+
+---
+
+## ⚙️ Features
+
+✅ Real-time company-to-contact enrichment using **Hunter.io**  
+✅ Verified public emails, roles, and LinkedIn profiles  
+✅ Zero-shot role classification using **HuggingFace Transformers** (with **PyTorch**)  
+✅ Ranked final output CSV  
+✅ Simple UI built in Flask for selecting companies  
+✅ Designed for fast, real-world usage within 5 hours  
+
+---
+
+## 🗂️ Project Structure
 
 ```
+
 caprae-leadgen-challenge/
 ├── data/
-│   ├── final.csv
-│   ├── raw_leads.csv
-│   ├── raw_master.csv
-│   ├── verified_leads.csv
-│   └── enriched_leads.csv
+│   ├── final.csv                # Final ranked leads
+│   ├── raw\_master.csv           # Input: list of companies
+│   └── enriched\_leads.csv       # Intermediate enriched leads from Hunter.io
 ├── templates/
-│   ├── index.html
-│   └── company.html
-├── verifier.py
-├── enrich_leads.py
-├── ranker.py
-├── main.py
-├── video.mp4
-├── rationale.pdf
-├── requirements.txt
-└── README.md
-```
+│   ├── index.html               # Web UI: dropdown to choose company
+│   └── company.html             # Web UI: table of ranked leads
+├── hunter\_enrich.py             # Pulls and enriches leads via Hunter.io
+├── ranker.py                    # NLP-based role ranking
+├── main.py                      # Flask web app
+├── rationale.pdf                # 1-page design rationale
+├── video.mp4                    # 1-2 min walkthrough video
+├── requirements.txt             # Python dependencies
+└── README.md                    # This file
+
+````
 
 ---
 
-## 💧 Tech Stack
+## 🧠 How It Works
 
-* Python (pandas, subprocess)
-* Flask (optional for frontend routing)
-* Bootstrap (CDN-based styling)
-* CSV for I/O
-
----
-
-## 🚀 How It Works
-
-1. **User selects a company** from dropdown in `index.html`
-2. **Company name is injected** into `raw_leads.csv`
-3. **`main.py` triggers**:
-
-   * `verifier.py` (email validation)
-   * `enrich_leads.py` (industry, size, role detection)
-   * `ranker.py` (lead scoring and CSV output)
-4. **Results** are displayed from `final.csv` on `company.html`
+1. User selects a company from the dropdown on `/`
+2. Company name is passed to `hunter_enrich.py`
+3. It pulls employee data using **Hunter.io Domain Search API**
+4. The data is cleaned, verified, and saved to `enriched_leads.csv`
+5. `ranker.py` uses **facebook/bart-large-mnli** to assign a score based on title (CEO > VP > Manager, etc.)
+6. Final ranked leads are saved in `final.csv`
+7. Flask displays them in a clean table
 
 ---
 
-## 📆 Setup & Run
+## 📦 Setup
 
-### Requirements
+### 1. Install dependencies
 
 ```bash
 pip install -r requirements.txt
+````
+
+### 2. Set your Hunter.io API key
+
+Open `hunter_enrich.py` and replace the placeholder:
+
+```python
+HUNTER_API_KEY = "your_actual_api_key"
 ```
 
-### Run the Pipeline
+### 3. Add companies to enrich
+
+Edit `data/raw_master.csv`:
+
+```csv
+company
+OpenAI
+Microsoft
+Anthropic
+```
+
+---
+
+## 🚀 Run the App
 
 ```bash
 python main.py
 ```
 
----
-
-## 📄 Deliverables
-
-* `README.md` (you are here)
-* `rationale.pdf` (explains business use-case thinking)
-* `main.py` (runs full backend pipeline)
-* `templates/index.html`, `company.html` (frontend)
-* `data/raw_leads.csv` (sample input)
-* `video.mp4` (submitted )
+Visit [http://127.0.0.1:5000](http://127.0.0.1:5000)
+Select a company → wait 10–20 seconds → see the top leads 🚀
 
 ---
 
-## 📖 Author
+## 📊 Sample Output (final.csv)
 
-**Mallikarjun Reddy Bardipuram(Sunny)**
+| name          | email                                     | role     | company | score | linkedin\_url             | verification\_status |
+| ------------- | ----------------------------------------- | -------- | ------- | ----- | ------------------------- | -------------------- |
+| Sam Altman    | [sam@openai.com](mailto:sam@openai.com)   | CEO      | OpenAI  | 10    | linkedin.com/in/samaltman | valid                |
+| Mira Murati   | [mira@openai.com](mailto:mira@openai.com) | CTO      | OpenAI  | 9     | linkedin.com/in/mira      | valid                |
+| Research Lead | [lead@openai.com](mailto:lead@openai.com) | Research | OpenAI  | 6     | linkedin.com/in/lead      | risky                |
+
+---
+
+## 🛠 Dependencies
+
+* Flask
+* requests
+* pandas
+* transformers
+* torch
+
+Install all with:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-Your current **🚀 Future Improvements** section is great, but here’s a more polished and expanded version that balances ambition with clarity and aligns even more with Caprae’s expectations:
+## 📥 Sample requirements.txt
+
+```txt
+Flask
+pandas
+requests
+transformers
+torch
+```
 
 ---
 
-## 🚀 Future Improvements
+## 📹 Deliverables
 
-* **🔗 LinkedIn Profile Scraping (Live):** Automate extraction of public titles, summaries, and activity to enhance role accuracy and enrich metadata.
-* **🧠 Role Detection via NLP:** Use transformer-based models (like BERT or DistilBERT) to classify job roles from raw text instead of keyword heuristics.
-* **🧩 CRM Integration:** Enable seamless push to Salesforce, HubSpot, or via **Zapier** for immediate lead flow into sales funnels.
-* **📈 Behavioral Lead Scoring:** Track website interactions like email opens, page visits, or calendar clicks to enrich the lead score dynamically.
-* **🔍 Smart Filtering & Search:** Let users filter leads by department, seniority, email type, or past interactions with customizable flags.
-* **📬 Automated Follow-Ups:** Integrate with tools like Mailchimp or Apollo to trigger email cadences based on lead rank and type.
-* **🔒 Ethical Data Handling:** Add GDPR-compliant consent flags and scraping safeguards to ensure regulatory alignment.
-* **🌐 Browser Extension:** Create a Chrome extension to tag leads from LinkedIn or Crunchbase in real time.
-* **📊 Analytics Dashboard:** Build a dashboard to track outreach efficiency, lead conversion, and ICP (ideal customer profile) alignment.
+| File               | Purpose                     |
+| ------------------ | --------------------------- |
+| `README.md`        | ✅ Project overview          |
+| `rationale.pdf`    | ✅ 1-page explanation        |
+| `video.mp4`        | ✅ 1–2 min video walkthrough |
+| `main.py`          | Flask app                   |
+| `ranker.py`        | Role classifier             |
+| `hunter_enrich.py` | Data enrichment pipeline    |
+| `data/*.csv`       | Input/output files          |
 
 ---
+
+## 🧠 Model Details
+
+| Component       | Model Used                 |
+| --------------- | -------------------------- |
+| Role Classifier | `facebook/bart-large-mnli` |
+| Framework       | PyTorch                    |
+| Inference Type  | Zero-shot classification   |
+
+---
+
+## 🌱 Future Improvements
+
+* 🔗 Public LinkedIn scraping (legally & ethically)
+* 📥 CRM integrations (HubSpot, Salesforce)
+* 🧠 Fine-tuned role classification models
+* 📊 Dashboard with filters & visual analytics
+* 📨 Automatic email sequences
+
+---
+
+## 👨‍💻 Author
+
+**Mallikarjun Reddy Bardipuram (Sunny)**
+Connect on LinkedIn or GitHub
+
+---
+
+## 🛡️ License
+
+MIT License — free for use, improvement, and deployment.
+
+```
+
+---
+
+Let me know if you want me to package this into a `.md` file or GitHub push instructions!
+```
