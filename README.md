@@ -74,7 +74,7 @@ pip install -r requirements.txt
 Open `hunter_enrich.py` and replace the placeholder:
 
 ```python
-HUNTER_API_KEY = "your_actual_api_key"
+HUNTER_API_KEY = "ecb5835bbc3b87ab717dde93a04a1f5ddf161cef"
 ```
 
 ### 3. Add companies to enrich
