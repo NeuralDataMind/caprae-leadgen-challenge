@@ -187,6 +187,3 @@ MIT License — free for use, improvement, and deployment.
 ```
 
 ---
-
-Let me know if you want me to package this into a `.md` file or GitHub push instructions!
-```
