@@ -38,6 +38,7 @@ caprae-leadgen-challenge/
 ├── enrich_leads.py
 ├── ranker.py
 ├── main.py
+├── video.mp4
 ├── rationale.pdf
 ├── requirements.txt
 └── README.md
@@ -86,11 +87,11 @@ python main.py
 ## 📄 Deliverables
 
 * `README.md` (you are here)
-* `Caprae Rationale.pdf.pdf` (explains business use-case thinking)
+* `rationale.pdf` (explains business use-case thinking)
 * `main.py` (runs full backend pipeline)
 * `templates/index.html`, `company.html` (frontend)
 * `data/raw_leads.csv` (sample input)
-* 1–2 minute walkthrough video (submitted separately)
+* 1–2 minute walkthrough video (submitted )
 
 ---
 
