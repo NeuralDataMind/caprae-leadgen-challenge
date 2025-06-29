@@ -1,7 +1,7 @@
 # 🧠 SaaSquatch Lead Intelligence Tool (Caprae AI Challenge)
 
 This project is a **real-time AI-powered lead enrichment and ranking system** built for the **Caprae Capital AI-Readiness Challenge**. It uses the **Hunter.io API** to enrich company names with actual decision-makers and ranks them using a **zero-shot NLP model** based on role importance.
-```markdown
+
 ---
 
 ## 🎯 Objective
