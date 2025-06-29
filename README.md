@@ -98,7 +98,6 @@ python main.py
 ## 📖 Author
 
 **Mallikarjun (Sunny)**
-*Caprae Capital Internship Candidate 2025*
 
 ---
 
