@@ -91,7 +91,7 @@ python main.py
 * `main.py` (runs full backend pipeline)
 * `templates/index.html`, `company.html` (frontend)
 * `data/raw_leads.csv` (sample input)
-* 1–2 minute walkthrough video (submitted )
+* `video.mp4` (submitted )
 
 ---
 
