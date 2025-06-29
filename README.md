@@ -101,11 +101,20 @@ python main.py
 
 ---
 
+Your current **🚀 Future Improvements** section is great, but here’s a more polished and expanded version that balances ambition with clarity and aligns even more with Caprae’s expectations:
+
+---
+
 ## 🚀 Future Improvements
 
-* Live LinkedIn profile scraping
-* Real-time role classification using NLP
-* CRM integration / Zapier export
-* Lead funnel scoring via website behavior
+* **🔗 LinkedIn Profile Scraping (Live):** Automate extraction of public titles, summaries, and activity to enhance role accuracy and enrich metadata.
+* **🧠 Role Detection via NLP:** Use transformer-based models (like BERT or DistilBERT) to classify job roles from raw text instead of keyword heuristics.
+* **🧩 CRM Integration:** Enable seamless push to Salesforce, HubSpot, or via **Zapier** for immediate lead flow into sales funnels.
+* **📈 Behavioral Lead Scoring:** Track website interactions like email opens, page visits, or calendar clicks to enrich the lead score dynamically.
+* **🔍 Smart Filtering & Search:** Let users filter leads by department, seniority, email type, or past interactions with customizable flags.
+* **📬 Automated Follow-Ups:** Integrate with tools like Mailchimp or Apollo to trigger email cadences based on lead rank and type.
+* **🔒 Ethical Data Handling:** Add GDPR-compliant consent flags and scraping safeguards to ensure regulatory alignment.
+* **🌐 Browser Extension:** Create a Chrome extension to tag leads from LinkedIn or Crunchbase in real time.
+* **📊 Analytics Dashboard:** Build a dashboard to track outreach efficiency, lead conversion, and ICP (ideal customer profile) alignment.
 
 ---
