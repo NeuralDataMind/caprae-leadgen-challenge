@@ -41,7 +41,7 @@ caprae-leadgen-challenge/
 ├── ranker.py                    # NLP-based role ranking
 ├── main.py                      # Flask web app
 ├── rationale.pdf                # 1-page design rationale
-├── video.mp4                    # 1-2 min walkthrough video
+├── video_link,txt               # 1-2 min walkthrough video
 ├── requirements.txt             # Python dependencies
 └── README.md                    # This file
 
