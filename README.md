@@ -97,7 +97,7 @@ python main.py
 ```
 
 Visit [http://127.0.0.1:5000](http://127.0.0.1:5000)
-Select a company → wait 10–20 seconds → see the top leads 🚀
+Select a company → wait 120-150 seconds → see the top leads 🚀
 
 ---
 
