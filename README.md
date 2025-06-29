@@ -186,5 +186,3 @@ Connect on LinkedIn or GitHub
 MIT License — free for use, improvement, and deployment.
 
 ```
-
----
