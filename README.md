@@ -32,12 +32,12 @@ To simulate a practical B2B lead generation workflow that:
 caprae-leadgen-challenge/
 ├── data/
 │   ├── final.csv                # Final ranked leads
-│   ├── raw\_master.csv           # Input: list of companies
-│   └── enriched\_leads.csv       # Intermediate enriched leads from Hunter.io
+│   ├── raw_master.csv           # Input: list of companies
+│   └── enriched_leads.csv       # Intermediate enriched leads from Hunter.io
 ├── templates/
 │   ├── index.html               # Web UI: dropdown to choose company
 │   └── company.html             # Web UI: table of ranked leads
-├── hunter\_enrich.py             # Pulls and enriches leads via Hunter.io
+├── hunter_enrich.py             # Pulls and enriches leads via Hunter.io
 ├── ranker.py                    # NLP-based role ranking
 ├── main.py                      # Flask web app
 ├── rationale.pdf                # 1-page design rationale
