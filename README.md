@@ -184,4 +184,3 @@ Connect on LinkedIn or GitHub
 ## 🛡️ License
 
 MIT License — free for use, improvement, and deployment.
-```
