@@ -177,7 +177,7 @@ torch
 ## 👨‍💻 Author
 
 **Mallikarjun Reddy Bardipuram (Sunny)**
-Connect on LinkedIn or GitHub
+Connect on [LinkedIn](https://www.linkedin.com/in/b-mallikarjun-reddy-9380b0217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) or [GitHub](https://github.com/NeuralDataMind)
 
 ---
 
