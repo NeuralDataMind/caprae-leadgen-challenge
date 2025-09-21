@@ -177,7 +177,7 @@ torch
 ## 👨‍💻 Author
 
 **Mallikarjun Reddy Bardipuram (Sunny)**
-Connect on LinkedIn or GitHub
+Connect on LinkedIn  or GitHub
 
 ---
 
